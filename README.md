@@ -2,7 +2,7 @@
 Gauge Visualization done in Javascript via the HTML5 Canvas.
 
 ## Example
-(https://github.com/dshifflet/JavaScriptGauges/blob/master/gauge_example.png?raw=true)
+![alt text](https://github.com/dshifflet/JavaScriptGauges/blob/master/gauge_example.png "Example Gauge")
 
 ## Setup
 ```javascript
