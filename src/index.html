@@ -1,0 +1,56 @@
+<html>
+	<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+
+	 <script src="no_jquery.js"></script> 
+	 <script src="gauges.js"></script>
+	<script>
+
+		ready(function() {
+			var flow = new gauge("FLOW",270,180,0,350,3, 
+			  new gaugeTitle("STREAM FLOW", "GPH"),
+			[ 
+				new gaugeTick(50,1,15,true),
+			  	new gaugeTick(25,1,10,false), 
+			  	new gaugeTick(5,1,5,false) 
+			],
+			[
+				new gaugeShade("green", 91,236,7),
+				new gaugeShade("red", 236,350,7),
+				new gaugeShade("white", 64,130,3)
+			],
+			[
+				new gaugeNeedle("line", "blue", 95, 2, 150),
+				new gaugeNeedle("pointy", "orange", 95, 2, 100)
+			]);
+			
+			var flow2 = new gauge("FLOW2",0,270,0,350,3, 
+			  new gaugeTitle("STREAM FLOW", "GPH"),
+			[ 
+				new gaugeTick(50,1,15,true),
+			  	new gaugeTick(25,1,10,false), 
+			  	new gaugeTick(5,1,5,false) 
+			],
+			[
+				new gaugeShade("white", 64,130,9),
+				new gaugeShade("green", 91,236,7),
+				new gaugeShade("red", 236,350,7)				
+			],
+			[
+				new gaugeNeedle("line", "blue", 95, 2, 150),
+				new gaugeNeedle("pointy", "orange", 95, 2, 100),			
+				new gaugeNeedle("longpointy", "AntiqueWhite", 80, 2, 200),
+				new gaugeNeedle("marker", "yellow", 95, 35, 305),				
+			]);			
+			flow.paint();		
+			flow2.paint();
+		});
+	</script>
+	</head>
+	<body style="background-color:black;">
+		<div id="FLOW" style="height:300px;width:300px;background-color:black;color:white;position:absolute;z-index:5;top:0;left:5;"></div>
+		<div id="FLOW2" style="height:300px;width:300px;background-color:black;color:white;position:absolute;z-index:10;top:200;left:5;"></div>
+	</body>
+</html>
