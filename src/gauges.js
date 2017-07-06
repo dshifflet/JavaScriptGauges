@@ -84,11 +84,11 @@ var gauges = new function() {
 		this.paint = function() {
 			self.setup();       
 
-			var ctx = self.background_canvas.getContext("2d");					
+			var backGroundCtx = self.background_canvas.getContext("2d");					
 			var foregroundCtx = self.foreground_canvas.getContext('2d');
 			
 			foregroundCtx.clearRect(0, 0, foregroundCtx.canvas.width, foregroundCtx.canvas.height);
-			foregroundCtx.drawImage(ctx.canvas, 0, 0);			
+			foregroundCtx.drawImage(backGroundCtx.canvas, 0, 0);			
 			
 			if(needles){
 				for(var i=0;i<needles.length;i++){
@@ -96,7 +96,6 @@ var gauges = new function() {
 				}
 			}
 			foregroundCtx.stroke();
-			ctx.stroke();
 		}
 		
 		return this;
