@@ -6,21 +6,21 @@ Gauge Visualization done in Javascript via the HTML5 Canvas.
 
 ## Setup
 ```javascript
-			var flow = new gauge("FLOW",270,180,0,350,3, 
-			  new gaugeTitle("STREAM FLOW", "GPH"),
+			var flow = new gauges.gauge("FLOW",270,180,0,350,3, 
+			  new gauges.gaugeTitle("STREAM FLOW", "GPH"),
 			[ 
-				new gaugeTick(50,1,15,true),
-			  	new gaugeTick(25,1,10,false), 
-			  	new gaugeTick(5,1,5,false) 
+				new gauges.gaugeTick(50,1,15,true),
+			  	new gauges.gaugeTick(25,1,10,false), 
+			  	new gauges.gaugeTick(5,1,5,false) 
 			],
 			[
-				new gaugeShade("green", 91,236,7),
-				new gaugeShade("red", 236,350,7),
-				new gaugeShade("white", 64,130,3)
+				new gauges.gaugeShade("green", 91,236,7),
+				new gauges.gaugeShade("red", 236,350,7),
+				new gauges.gaugeShade("white", 64,130,3)
 			],
 			[
-				new gaugeNeedle("line", "blue", 95, 2, 150),
-				new gaugeNeedle("pointy", "orange", 95, 2, 100)
+				new gauges.gaugeNeedle(new gauges.needlePainters.lineNeedle(), "blue", 95, 2, 0),
+				new gauges.gaugeNeedle(new gauges.needlePainters.pointyNeedle(), "orange", 95, 2, 10)
 			]);
 			flow.paint();	
 ```
