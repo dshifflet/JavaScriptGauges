@@ -4,6 +4,9 @@ Gauge Visualization done in Javascript via the HTML5 Canvas.
 ## Example
 ![alt text](https://github.com/dshifflet/JavaScriptGauges/blob/master/gauge_example.png "Example Gauge")
 
+## Live Demo
+http://www.dshifflet.com/gauges/
+
 ## Setup
 ```javascript
 			var flow = new gauges.gauge("FLOW",270,180,0,350,3, 
